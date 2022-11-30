@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def uppercase(str):
     for i in str:
-        unicodeNum = ord(f'{i}')
+        unicodeNum = ord(i)
         if unicodeNum == 32:
             continue
         unicodeNum -= 32
