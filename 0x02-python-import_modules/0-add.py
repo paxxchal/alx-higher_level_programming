@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
+    """Print some of 1 and 2"""
     import add_0
     a = 1
     b = 2
