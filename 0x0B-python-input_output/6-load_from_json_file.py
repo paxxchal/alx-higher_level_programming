@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This module defines a function
-that creates an Object from a “JSON file”
+that creates an Object from a JSON file
 """
 import json
 
