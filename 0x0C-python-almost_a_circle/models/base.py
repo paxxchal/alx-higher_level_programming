@@ -7,14 +7,21 @@ first class Base
 
 
 class Base:
-    """This class is a base class"""
+    """Represent the base model.
+
+    Represents the "base" for all other classes in project 0x0C*.
+
+    Attributes:
+        __nb_objects (int): The number of instantiated Bases.
+    """
 
     __nb_objects = 0
 
-    def __init__(self, id=None):
+    def __init__(self, id):
         """This function initializes attributes"""
         if id is not None:
             self.id = id
-        else:
+        elif id == None:
             Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+            id = Base.__nb_objects
+            self.id = id
