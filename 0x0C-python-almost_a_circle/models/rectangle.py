@@ -96,6 +96,7 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args):
+        """assigns an argument to each attribute"""
         if len(args) == 5:
             self.id, self.__width, self.__height, self.__x, self.__y = args
         elif len(args) == 4:
