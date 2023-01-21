@@ -33,8 +33,21 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        """assigns an argument to each attribute"""
+        if args:
+            if len(args) == 4:
+                self.id, self.size, self.x, self.y = args
+            elif len(args) == 3:
+                self.id, self.size, self.x = args
+            elif len(args) == 2:
+                self.id, self.size = args
+            elif len(args) == 1:
+                self.id = args[0]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
     def __str__(self):
         """Return the print() and str() representation of the Square."""
-        return "[Square] ({}) {}/{} - {}".format(
-            self.id, self.x, self.y, self.width
-        )
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
