@@ -1,6 +1,6 @@
 -- Script to create second_table and insert multiple rows
 
-CREATE TABLE IF NOT EXISTS hbtn_0c_0.second_table (
+CREATE TABLE IF NOT EXISTS `second_table` (
     id INT,
     name VARCHAR(256),
     score INT
