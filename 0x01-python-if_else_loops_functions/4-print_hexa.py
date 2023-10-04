@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-for i in range(0, 99):
-    print(f"{i} = 0x{hex(i)[2:]}")
+
+for num in range(99):
+    print("{} = 0x{:x}".format(num, num))
