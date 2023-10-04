@@ -8,4 +8,4 @@ def uppercase(str):
                 ord(c) - 32
             )  # convert it to uppercase by subtracting 32 from its ASCII code
         print("{}".format(c), end="")  # outputs the character without a new line
-    print()  # outputs a new line at the end
+    print("")  # outputs a new line at the end
