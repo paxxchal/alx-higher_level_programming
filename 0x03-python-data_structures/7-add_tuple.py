@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    # Initialize two variables to store the first and second elements of each tuple
+    # Initialize two variables to store
+    # the first and second elements of each tuple
     a1 = 0
     a2 = 0
     b1 = 0
