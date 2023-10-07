@@ -1,7 +1,8 @@
 {
 	"cSpell.words": [
 		"hbtn",
-		"Holberton"
+		"Holberton",
+		"pythoniscool"
 	],
 	"[python]": {
 		"editor.defaultFormatter": "ms-python.black-formatter"
