@@ -1,8 +1,10 @@
 {
 	"cSpell.words": [
+		"doctests",
 		"hbtn",
 		"Holberton",
-		"pythoniscool"
+		"pythoniscool",
+		"Traceback"
 	],
 	"[python]": {
 		"editor.defaultFormatter": "ms-python.black-formatter"
