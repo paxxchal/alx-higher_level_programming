@@ -33,7 +33,7 @@ Test default b=98 value
     >>> add_integer(2)
     100
  
-Test addition over multiple lines:
+Test additon over multiple lines:
     >>> [add_integer(i, i * 2) for i in range(5)]
     [0, 3, 6, 9, 12]
     >>>
@@ -42,7 +42,7 @@ Test for super long int:
     >>> add_integer(999999999999999999999999999999999999999999999, 1)
     1000000000000000000000000000000000000000000000
 
-Failed case:
+Falied case:
 
 Test no arg:
     >>> add_integer(None)
