@@ -1,18 +1,22 @@
 #!/usr/bin/python3
-add_attribute = __import__("101-add_attribute").add_attribute
+BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
+bg = BaseGeometry()
 
-class MyClass:
-    pass
-
-
-mc = MyClass()
-add_attribute(mc, "name", "John")
-print(mc.name)
+bg.integer_validator("my_int", 12)
+bg.integer_validator("width", 89)
 
 try:
-    a = "My String"
-    add_attribute(a, "name", "Bob")
-    print(a.name)
+    bg.integer_validator("name", "John")
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    bg.integer_validator("age", 0)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    bg.integer_validator("distance", -4)
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
