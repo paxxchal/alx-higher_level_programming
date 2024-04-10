@@ -1,0 +1,25 @@
+{
+  "name": "alx-higher_level_programming",
+  "version": "1.0.0",
+  "description": "This repo contains my tasks for ALX Higher level programming starting with python",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/paxxchal/alx-higher_level_programming.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paxxchal/alx-higher_level_programming/issues"
+  },
+  "homepage": "https://github.com/paxxchal/alx-higher_level_programming#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-react": "^7.34.1",
+    "globals": "^15.0.0"
+  }
+}
