@@ -3,9 +3,11 @@
 		"doctests",
 		"hbtn",
 		"Holberton",
+		"mysqldb",
 		"nqueens",
 		"Occurences",
 		"pythoniscool",
+		"sessionmaker",
 		"sqlalchemy",
 		"Traceback"
 	],
