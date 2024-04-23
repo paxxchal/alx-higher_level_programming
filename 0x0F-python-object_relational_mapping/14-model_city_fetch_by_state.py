@@ -1,43 +1,18 @@
 #!/usr/bin/python3
+"""List all State objects that contain letter 'a' from db 'hbtn_0e_6_usa'
+Script should take 3 args: username, pw, and db name
 """
-Script to print all City objects from the database hbtn_0e_14_usa.
-"""
-
 import sys
-from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
 from model_state import Base, State
 from model_city import City
 
 if __name__ == "__main__":
-    # Check if correct number of arguments provided
-    if len(sys.argv) != 4:
-        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
-        sys.exit(1)
-
-    # Retrieve command line arguments
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-
-    # Database connection URL
-    db_url = f'mysql+mysqldb://{username}:{password}@localhost:3306/{database}'
-
-    # Create engine
-    engine = create_engine(db_url, pool_pre_ping=True)
-
-    # Create session class
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
-
-    # Create a session
     session = Session()
-
-    # Query to retrieve all City objects and their corresponding State objects
-    cities = session.query(City, State).join(State).order_by(City.id).all()
-
-    # Print results
-    for city, state in cities:
-        print(f"{state.name}: ({city.id}) {city.name}")
-
-    # Close the session
-    session.close()
+    sl = session.query(State, City).filter(State.id == City.state_id)
+    for q in sl:
+        print("{}: ({:d}) {}".format(q.State.name, q.City.id, q.City.name))
