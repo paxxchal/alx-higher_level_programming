@@ -5,7 +5,6 @@ from urllib import request
 from urllib.parse import urlencode
 
 
-
 if __name__ == "__main__":
     post_dicts = {"email": sys.argv[2]}
     url_encoded_data = urlencode(post_dicts)
